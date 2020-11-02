@@ -1,31 +1,19 @@
-# README
+# The Avengerz ToDo List Heroes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## User Story
 
-Things you may want to cover:
+AS A USER WHO WANTS TO ORGANISE THEIR LIFE
+I WANT TO BE ABLE TO ACCESS A WEB APP
+TO BE ABLE TO EASILY INPUT DAILY TASKS
+AS A USER I WANT A EASY USER INTERFACE
+TO KNOW HOW TO USE THE WEB APP EASILY
+AS A USER I WANT TO BE ABLE TO LOG ON TO MY OWN TO DO LIST ACCOUNT
+TO BE ABLE TO ACCESS MY TODO LIST WHEREVER I WANT
 
-* Ruby version
+<br>
 
-* System dependencies
+#
 
-* Configuration
+<br>
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-This is a test change
-
-
-This is a change from Jacin. This is more changes from Vinson as well
-
-small chang eis made 
+##
