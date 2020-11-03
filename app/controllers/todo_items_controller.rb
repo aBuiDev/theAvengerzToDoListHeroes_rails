@@ -4,18 +4,17 @@ class TodoItemsController < ApplicationController
   # GET /todo_items
   # GET /todo_items.json
   def index
-    @todo_items = TodoItems.all
+    @todo_items = TodoItem.all
   end
 
   # GET /todo_items/1
   # GET /todo_items/1.json
   def show
-    @todo_items = TodoItems.find(params[:id])
   end
 
   # GET /todo_items/new
   def new
-    @todo_item = TodoItems.new
+    @todo_item = TodoItem.new
   end
 
   # GET /todo_items/1/edit
@@ -25,7 +24,7 @@ class TodoItemsController < ApplicationController
   # POST /todo_items
   # POST /todo_items.json
   def create
-    @todo_item = TodoItems.new(todo_item_params)
+    @todo_item = TodoItem.new(todo_item_params)
 
     respond_to do |format|
       if @todo_item.save

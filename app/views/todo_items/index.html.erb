@@ -12,13 +12,13 @@
   </thead>
 
   <tbody>
-    <% @tasks.each do |task| %>
+    <% @todo_items.each do |todo_item| %>
       <tr>
-        <td><%= task.content %></td>
-        <td><%= task.todo_list_id %></td>
-        <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= todo_item.content %></td>
+        <td><%= todo_item.todo_list_id %></td>
+        <td><%= link_to 'Show', todo_item %></td>
+        <td><%= link_to 'Edit', edit_todo_item_path(todo_item) %></td>
+        <td><%= link_to 'Destroy', todo_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Task', new_task_path %>
+<%= link_to 'New Todo Item', new_todo_list_todo_item_path %>
