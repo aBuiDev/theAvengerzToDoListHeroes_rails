@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   resources :todo_lists do
-    end
-
-  root "todo_lists#index"
-  
-end
+    resources :todo_items
+   end
+ root "todo_lists#index"
+ end
 
 # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
