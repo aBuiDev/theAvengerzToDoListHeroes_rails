@@ -1,75 +1,75 @@
 class TodoItemsController < ApplicationController
-  before_action :set_task, only: [:show, :edit, :update, :destroy]
+  before_action :set_todo_item, only: [:show, :edit, :update, :destroy]
 
-  # GET /tasks
-  # GET /tasks.json
+  # GET /todo_items
+  # GET /todo_items.json
   def index
-    @tasks = Task.all
+    @todo_items = TodoItems.all
   end
 
-  # GET /tasks/1
-  # GET /tasks/1.json
+  # GET /todo_items/1
+  # GET /todo_items/1.json
   def show
-    @tasks = Task.find(params[:id])
+    @todo_items = TodoItems.find(params[:id])
   end
 
-  # GET /tasks/new
+  # GET /todo_items/new
   def new
-    @task = Task.new
+    @todo_item = TodoItems.new
   end
 
-  # GET /tasks/1/edit
+  # GET /todo_items/1/edit
   def edit
   end
 
-  # POST /tasks
-  # POST /tasks.json
+  # POST /todo_items
+  # POST /todo_items.json
   def create
-    @task = Task.new(task_params)
+    @todo_item = TodoItems.new(todo_item_params)
 
     respond_to do |format|
-      if @task.save
-        format.html { redirect_to @task, notice: 'Task was successfully created.' }
-        format.json { render :show, status: :created, location: @task }
+      if @todo_item.save
+        format.html { redirect_to @todo_item, notice: 'todo_item was successfully created.' }
+        format.json { render :show, status: :created, location: @todo_item }
       else
         format.html { render :new }
-        format.json { render json: @task.errors, status: :unprocessable_entity }
+        format.json { render json: @todo_item.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # PATCH/PUT /tasks/1
-  # PATCH/PUT /tasks/1.json
+  # PATCH/PUT /todo_items/1
+  # PATCH/PUT /todo_items/1.json
   def update
     respond_to do |format|
-      if @task.update(task_params)
-        format.html { redirect_to @task, notice: 'Task was successfully updated.' }
-        format.json { render :show, status: :ok, location: @task }
+      if @todo_item.update(todo_item_params)
+        format.html { redirect_to @todo_item, notice: 'todo_item was successfully updated.' }
+        format.json { render :show, status: :ok, location: @todo_item }
       else
         format.html { render :edit }
-        format.json { render json: @task.errors, status: :unprocessable_entity }
+        format.json { render json: @todo_item.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # DELETE /tasks/1
-  # DELETE /tasks/1.json
+  # DELETE /todo_items/1
+  # DELETE /todo_items/1.json
   def destroy
-    @task.destroy
+    @todo_item.destroy
     respond_to do |format|
-      format.html { redirect_to tasks_url, notice: 'Task was successfully destroyed.' }
+      format.html { redirect_to todo_items_url, notice: 'todo_item was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_task
-      @task = Task.find(params[:id])
+    def set_todo_item
+      @todo_item = todo_item.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
-    def task_params
-      params.require(:task).permit(:content, :todo_list_id)
+    def todo_item_params
+      params.require(:todo_item).permit(:content, :todo_list_id)
     end
 end
